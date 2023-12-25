@@ -2,4 +2,6 @@ node{
     stage('Git Checkout'){
         git 'https://github.com/Muruganv07/my-app.git'
     }
+    stage('Mvn build'){
+tool name: 'maven-3', type: 'maven'
 }
