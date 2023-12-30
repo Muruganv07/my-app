@@ -7,6 +7,6 @@ node{
    sh "${mvnHome}/bin/mvn package"
 }
     stage('Email Notification'){
-mail bcc: '', body: 'Git & Maven Integration project successfully build', cc: 'devanshi24198@gmail.com,gangakanagarajan@gmail.com', from: '', replyTo: '', subject: 'Git & Maven Integration project', to: 'muruganvenkat07@gmail.com'
+mail bcc: '', body: 'Git & Maven Integration project successfully build', cc: 'kumartr0205@gmail.com', from: '', replyTo: '', subject: 'Git & Maven Integration project', to: 'muruganvenkat07@gmail.com'
 }
 }
