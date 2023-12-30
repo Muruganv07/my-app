@@ -12,25 +12,5 @@ stage('SonarQube Analysis') {
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
 	    }
-    stage('Email Notification'){
-mail bcc: '', body: '''node{
-    stage(\'Git Checkout\'){
-        git \'https://github.com/Muruganv07/my-app.git\'
-    }
-    stage(\'Mvn build\'){
-   def mvnHome = tool name: \'maven-3\', type: \'maven\'
-   sh "${mvnHome}/bin/mvn package"
-}
-stage(\'SonarQube Analysis\') {
-	        def mvnHome =  tool name: \'maven-3\', type: \'maven\'
-	        withSonarQubeEnv(\'sonar-scanner\') { 
-	          sh "${mvnHome}/bin/mvn sonar:sonar"
-	        }
-	    }
-    stage(\'Email Notification\'){
-
-}
-}
-''', cc: 'kumartr0205@gmail.com', from: '', replyTo: '', subject: 'Test completed successfully ', to: 'muruganvenkat07@gmail.com'
-}
+    
 }
